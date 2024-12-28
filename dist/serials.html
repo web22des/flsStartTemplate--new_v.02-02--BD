@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241227190018">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241228230131">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,20 +14,37 @@
 
 <body>
 	<div class="wrapper">
+		<!-- https://youtu.be/zs1r8yafTE8 -->
+		<!-- Адаптивное меню бургер с выпадающим подменю, а так же при помощи JS выбирает режим отбражения PC или Mobile -->
+		<!-- Так же навигация "Раздел-1" "Раздел-2" "Раздел-3" - это навигация по странице с плавным скроллом -->
+		<!-- Посмотреть пример на codePen https://codepen.io/web22des/pen/ZEMJNrB -->
+		<!-- Не работает с основными функциями шаблона ( функция flsFunctions.addTouchClass(); - должна быть выключена) -->
+		<!-- Также в основную страницу (home.html) в блоки, на которые привязана навигация нужно указать классы, закоментированный пример HTML-разметки внизу -->
+		<!-- Подключить стили -->
+		<!-- файл _header-burger.htm подключить в HTML файл home.html  @include('html/my-html/_header-burger.htm',{})  -->
+		<!-- файл header-burger.scss раскоментировать в файле общих стилей common.scss -->
+		<!-- файл header-burger.js раскоментировать в файле скриптов script.js -->
+
 		<header class="header">
 			<div class="header__container">
+				<a class="header__logo" href="home.html"></a>
 				<div class="header__menu menu">
-					<div class="header__logo">
-						<a href="home.html" class="logo">Logo</a>
-					</div>
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="serials.html" class="menu__link">Сериалы</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Фитнес</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Школьникам</a></li>
-							<li class="menu__item none"><a href="" class="menu__link">Ссылка-4</a></li>
-							<li class="menu__item none"><a href="" class="menu__link">Ссылка-5</a></li>
+							<li><a data-goto=".page__section--2" href="home.html" class="menu__link">Главная</a></li>
+							<li><a data-goto=".page__section--2" href="serials.html" class="menu__link">Сериалы</a></li>
+							<li><a data-goto=".page__section--1" href="fitnes.html" class="menu__link">Фитнес</a></li>
+							<li><a data-goto=".page__section--3" href="scool.html" class="menu__link">Школьникам</a></li>
+							<!-- <li>
+                        <a href="#" class="menu__link">Страница-1</a>
+                        <span class="menu__arrow"></span>
+                        <ul class="menu__sub-list">
+                            <li><a href="#" class="menu__sub-link">Раздел страницы-1</a></li>
+                            <li><a href="#" class="menu__sub-link">Раздел страницы-1</a></li>
+                            <li><a href="#" class="menu__sub-link">Раздел страницы-1</a></li>
+                        </ul>
+                    </li> -->
 						</ul>
 					</nav>
 				</div>
@@ -44,6 +61,8 @@
 				</div>
 			</div>
 		</header>
+
+		<!-- =============== -->
 
 		<main class="page">
 			<div class="section-title-wrap">
@@ -76,7 +95,7 @@
 									<p class="section-01__card-text">
 										Йеллоустоун – первый в мире национальный парк, одно из самых посещаемых мест в США. Но здесь, на границе цивилизации, происходит много такого, чего не
 										видят туристы, что не освещается средствами массовой информации. Семья Даттон, главой которой является Джон Даттон, владеет огромным ранчо, сопредельным
-										с территорией парка. На их землю претендует и сам парк, и индейская ( Читать дальше... )
+										с территорией парка.
 									</p>
 									<p class="section-01__card-text none">еще параграф</p>
 								</div>
@@ -209,7 +228,7 @@
 	</div>
 </div>
  -->
-	<script src="js/app.min.js?_v=20241227190018"></script>
+	<script src="js/app.min.js?_v=20241228230131"></script>
 </body>
 
 </html>
